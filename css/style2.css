@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;   
+    color: #fff;
+}
+
+header {
+    min-height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(91, 83, 214);
+}
+header h1 {
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+}
+
+main {
+    padding: 0%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgb(240, 240, 243),rgb(8, 103, 247));
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0px 2px 3px black;
+}
+
+main form {
+    margin-top: 5%;
+    width: 35%;
+    height: 75vh;
+    background-color: rgb(91, 83, 214);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0,4) inset rgba(0, 0, 0, 0,25);
+    border-radius: 18px;
+    padding: 2%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .inputs-container {
+    margin-top: 10%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .inputs-container input {
+    width: 75%;
+    height: 55px;
+    padding: 7px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    
+    font-size: 18px;
+    color: black;
+}
+
+main form .password-container {
+    height: 70px ;
+    margin-top: 2%;
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .password-container i {
+    position: absolute;
+    right: 17%;
+    top: 50%;
+    color: #777;
+    cursor: pointer;
+}
+
+main form .password-container #eye {
+    display: none;
+}
+
+main form button {
+    background-color: #18acfe;
+    width: 70%;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    margin-top: 10%;
+    font-size: 1.6em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;  
+}
+
+main form button:hover {
+    background: #fff;
+    color: #18acfe;
+}
+

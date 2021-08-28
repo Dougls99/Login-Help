@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Helper</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/style2.css">
     <script src="./js/index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,37 +20,35 @@
     <main>
         <form>
             <section class="inputs-container">
-                <input type="email" placeholder="example@gmail.com">
 
-                <div class="password-container">
+                <p>Nome</p>
+
+                <input id="nome" type="nome" placeholder="nome">
+
+                <p>Email</p>
+
+                <input id="email" type="email" placeholder="example@gmail.com">
+
+                <div class="password-container"> 
+
+                <p>Senha</p>
+
                  <input type="password" id="fiel-password" class="fiel-password" placeholder="********">  
                  <i class="fas fa-eye" id="eye" onclick="showPassword()"></i>
                  <i class="fas fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
                 </div>
-            </section>
-            <section class="password-infos">
-                <div>
-                    <input type="checkbox">
-                    <span>Lembrar Senha</span>
-                </div>
-                <a href="a">Esqueceu sua senha?</a>
-            </section>
-            <button id="btn-login">Login</button>
 
-            <section class="links-container">
-                <span>Ou entre com:</span>
+                <div class="password-container"> 
 
-                <aside>
-                <a href="#"><i class="fab fa-google google"></i></a>
-                <a href="#"><i class="fab fa-linkedin linkedin"></i></a>
-                <a href="#"><i class="fab fa-facebook-square facebook"></i></a>
-               
-               </aside>
+                <p>Confirmar Senha</p>
+
+                    <input type="password" id="fiel-password2" class="fiel-password" placeholder="********">  
+                    <i class="fas fa-eye" id="eye2" onclick="showPassword2()"></i>
+                    <i class="fas fa-eye-slash" id="eye-slash2" onclick="showPassword2()"></i>
+                   </div>
             </section>
-            <footer>
-                <hr>
-                <spam> Ainda não tem uma conta ?<a href="./cadastro.html">Cadastra-se</a></spam>
-            </footer>
+
+            <button onclick='return validar()' id="btn-cadastrar">Cadastrar</button>
 
         </form>
     </main>
