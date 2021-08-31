@@ -76,10 +76,10 @@ nome.addEventListener('keyup', () => {
 
 email.addEventListener('keyup', () => {
     
-    if(document.forms[0].email.value == "" ||
-       document.forms[0].email.value.indexOf('@')==-1 ||
-       document.forms[0].email.value.indexOf('.')==-1 ||
-       document.forms[0].email.value.indexOf('.com')==-1
+    if(email.value == "" ||
+       email.value.indexOf('@')==-1 ||
+       email.value.indexOf('.')==-1 ||
+       email.value.indexOf('.com')==-1
        ){
         email.setAttribute('style', 'background-color: red;')
         labelemail.innerHTML='Email invalido'
