@@ -54,7 +54,7 @@ function cadastrar(){
     if(validnome && validemail && validsenha && validconfirmsenha){
         alert('Deu Certo')
     }else{
-        alert('algo errado')
+        alert('Algo errado')
     }
 }
 
@@ -76,7 +76,11 @@ nome.addEventListener('keyup', () => {
 
 email.addEventListener('keyup', () => {
     
-    if(email.value.length <= 8 ){
+    if(document.forms[0].email.value == "" ||
+       document.forms[0].email.value.indexOf('@')==-1 ||
+       document.forms[0].email.value.indexOf('.')==-1 ||
+       document.forms[0].email.value.indexOf('.com')==-1
+       ){
         email.setAttribute('style', 'background-color: red;')
         labelemail.innerHTML='Email invalido'
         let validemail = false
