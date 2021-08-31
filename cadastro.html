@@ -15,42 +15,42 @@
 </head>
 <body>
     <header>
-    <h1>Login-Helper</h1>
+      <h1>Login-Helper</h1>
     </header>
     <main>
-        <form>
-            <section class="inputs-container">
+     <form>
+        <section class="inputs-container">
 
-                <p>Nome</p>
+            <label id="labelnome">Nome:</label>
 
-                <input id="nome" type="nome" placeholder="nome">
+         <input id="nome" type="nome" placeholder="nome">
 
-                <p>Email</p>
+            <label id="labelemail">Email:</label>
 
-                <input id="email" type="email" placeholder="example@gmail.com">
+         <input id="email" type="email" placeholder="example@gmail.com">
 
-                <div class="password-container"> 
+        <div class="password-container"> 
 
-                <p>Senha</p>
+            <label id="labelsenha">Senha:</label>
 
-                 <input type="password" id="fiel-password" class="fiel-password" placeholder="********">  
-                 <i class="fas fa-eye" id="eye" onclick="showPassword()"></i>
-                 <i class="fas fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
-                </div>
+         <input type="password" id="fiel-password" class="fiel-password" placeholder="********">  
+            <i class="fas fa-eye" id="eye" onclick="showPassword()"></i>
+            <i class="fas fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
+        </div>
 
-                <div class="password-container"> 
+        <div class="password-container"> 
 
-                <p>Confirmar Senha</p>
+             <label id="labelconfirmsenha">Comfirme a Senha:</label>
 
-                    <input type="password" id="fiel-password2" class="fiel-password" placeholder="********">  
-                    <i class="fas fa-eye" id="eye2" onclick="showPassword2()"></i>
-                    <i class="fas fa-eye-slash" id="eye-slash2" onclick="showPassword2()"></i>
-                   </div>
-            </section>
+            <input type="password" id="fiel-password2" class="fiel-password" placeholder="********">  
+             <i class="fas fa-eye" id="eye2" onclick="showPassword2()"></i>
+             <i class="fas fa-eye-slash" id="eye-slash2" onclick="showPassword2()"></i>
+        </div>
+        </section>
 
-            <button onclick='return validar()' id="btn-cadastrar">Cadastrar</button>
+        <button onclick='cadastrar()' id="btn-cadastrar">Cadastrar</button>
 
-        </form>
+     </form>
     </main>
 </body>
 </html>
