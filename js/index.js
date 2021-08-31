@@ -14,6 +14,9 @@ let confirmsenha = document.querySelector('#fiel-password2')
 let labelconfirmsenha = document.querySelector('#labelconfirmsenha')
 let validconfirmsenha = false
 
+let Msgerro = document.querySelector('#Msgerro')
+let Sucesso = document.querySelector('#Sucesso')
+
 function showPassword() {
     const eye = document.getElementById('eye');
     const eyeSlash = document.getElementById('eye-slash');
@@ -52,9 +55,11 @@ function showPassword2() {
 
 function cadastrar(){
     if(validnome && validemail && validsenha && validconfirmsenha){
-        alert('Deu Certo')
+        Sucesso.setAttribute('style', 'display: block')
+        Msgerro.setAttribute('style', 'display: none')
     }else{
-        alert('Algo errado')
+        Msgerro.setAttribute('style', 'display: block')
+        Sucesso.setAttribute('style', 'display: none')
     }
 }
 
