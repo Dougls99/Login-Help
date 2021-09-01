@@ -8,7 +8,7 @@
 }
 
 header {
-    min-height: 9vh;
+    min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@ header h1 {
 main {
     padding: 0%;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     background: linear-gradient(rgb(240, 240, 243),rgb(8, 103, 247));
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ main {
 }
 
 main form {
-    margin-top: 5%;
+    margin-block: auto;
     width: 35%;
     height: 75vh;
     background-color: rgb(91, 83, 214);
