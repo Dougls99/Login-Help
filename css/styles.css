@@ -8,7 +8,7 @@
 }
 
 header {
-    min-height: 9vh;
+    min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@ header h1 {
 main {
     padding: 0%;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     background: linear-gradient(rgb(240, 240, 243),rgb(8, 103, 247));
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ main {
 }
 
 main form {
-    margin-top: 5%;
+    margin-block: auto;
     width: 35%;
     height: 75vh;
     background-color: rgb(91, 83, 214);
@@ -41,6 +41,14 @@ main form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+main form .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 main form .inputs-container {
@@ -94,7 +102,7 @@ main form .password-container #eye {
 
 
 main form .password-infos {
-    width: 70%;
+    width: 60%;
     margin-top: 3%;
 
     display: flex;
@@ -112,7 +120,7 @@ main form .password-infos a:hover {
 
 main form button {
     background-color: #18acfe;
-    width: 70%;
+    width: 60%;
     height: 50px;
     border: 0;
     outline: 0;
@@ -191,8 +199,8 @@ main form .links-container aside .linkedin:hover {
 }
 
 main form footer {
-    width: 100%;
-    margin-top: 10%;
+    width: 75%;
+    margin-top: 7%;
 
     display: flex;
     flex-direction: column;
@@ -205,7 +213,7 @@ main form footer hr {
     background-color: #fff;
 }
 
-main form footer span {
+main form footer spam {
     font-weight: 400;
     font-size: 0.9em;
     margin-top: 5%;

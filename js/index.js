@@ -61,6 +61,13 @@ function cadastrar(){
         Msgerro.setAttribute('style', 'display: block')
         Sucesso.setAttribute('style', 'display: none')
     }
+
+    console.log (`
+        validnome=${validnome}\n
+        validemail=${validemail}\n
+        validsenha=${validsenha}\n
+        validconfirmsenha=${validconfirmsenha}
+    `);
 }
 
 /* Botao cadastrar */
@@ -88,11 +95,11 @@ email.addEventListener('keyup', () => {
        ){
         email.setAttribute('style', 'background-color: red;')
         labelemail.innerHTML='Email invalido'
-        let validemail = false
+        validemail = false
     } else {
         email.setAttribute('style', 'background-color: greenyellow;')
         labelemail.innerHTML='Email:'
-        let validemail = true
+        validemail = true
     }
 })
 
