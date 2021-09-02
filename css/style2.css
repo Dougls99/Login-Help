@@ -22,7 +22,7 @@ header h1 {
 main {
     padding: 0%;
     width: 100%;
-    min-height: 100vh;
+    min-height: 91vh;
     background: linear-gradient(rgb(240, 240, 243),rgb(8, 103, 247));
     display: flex;
     justify-content: center;
