@@ -53,13 +53,16 @@ function showPassword2() {
 
 /*Esconder senha 2*/ 
 
-function cadastrar(){
+ function cadastrar(){
     if(validnome && validemail && validsenha && validconfirmsenha){
         Sucesso.setAttribute('style', 'display: block')
         Msgerro.setAttribute('style', 'display: none')
+        window.history.back();
+
     }else{
         Msgerro.setAttribute('style', 'display: block')
         Sucesso.setAttribute('style', 'display: none')
+        window.history.back();
     }
 
     console.log (`
@@ -91,7 +94,10 @@ email.addEventListener('keyup', () => {
     if(email.value == "" ||
        email.value.indexOf('@')==-1 ||
        email.value.indexOf('.')==-1 ||
-       email.value.indexOf('.com')==-1
+       email.value.indexOf('.com')==-1 ||
+       email.value.indexOf('hotmail')==-1 &&
+       email.value.indexOf('gmail')==-1 &&
+       email.value.indexOf('outlook')==-1 
        ){
         email.setAttribute('style', 'background-color: red;')
         labelemail.innerHTML='Email invalido'
@@ -122,7 +128,8 @@ senha.addEventListener('keyup', () => {
 
 confirmsenha.addEventListener('keyup', () => {
     
-    if(senha.value != confirmsenha.value){
+    if(senha.value != confirmsenha.value ||
+        confirmsenha.value.length <=5 ){
         confirmsenha.setAttribute('style', 'background-color: red;')
         labelconfirmsenha.innerHTML='As Senhas não Conferem'
         validconfirmsenha = false
@@ -132,3 +139,4 @@ confirmsenha.addEventListener('keyup', () => {
         validconfirmsenha = true
     }
 })
+/*corfirmaçao da senha*/
