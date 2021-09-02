@@ -55,14 +55,15 @@ function showPassword2() {
 
  function cadastrar(){
     if(validnome && validemail && validsenha && validconfirmsenha){
+
+        window.history.back()
         Sucesso.setAttribute('style', 'display: block')
         Msgerro.setAttribute('style', 'display: none')
-        window.history.back();
-
+           
     }else{
         Msgerro.setAttribute('style', 'display: block')
         Sucesso.setAttribute('style', 'display: none')
-        window.history.back();
+        
     }
 
     console.log (`
