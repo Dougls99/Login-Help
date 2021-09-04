@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
-    text-decoration: none;   
+    text-decoration: none;
     color: #fff;
 }
 
@@ -14,6 +14,7 @@ header {
     justify-content: center;
     background-color: rgb(91, 83, 214);
 }
+
 header h1 {
     font-size: 2.5em;
     color: rgb(255, 255, 255);
@@ -23,7 +24,7 @@ main {
     padding: 0%;
     width: 100%;
     min-height: 91vh;
-    background: linear-gradient(rgb(240, 240, 243),rgb(8, 103, 247));
+    background: linear-gradient(rgb(240, 240, 243), rgb(8, 103, 247));
     display: flex;
     justify-content: center;
     box-shadow: inset 0px 2px 3px black;
@@ -37,10 +38,10 @@ main form {
     height: 70vh;
 
     background-color: rgb(91, 83, 214);
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0,4) inset rgba(0, 0, 0, 0,25);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0, 4) inset rgba(0, 0, 0, 0, 25);
     border-radius: 18px;
     padding: 2%;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,13 +63,13 @@ main form .inputs-container input {
     border: 0;
     outline: 0;
     border-radius: 12px;
-    
+
     font-size: 18px;
     color: black;
 }
 
 main form .password-container {
-    height: 70px ;
+    height: 70px;
     margin-top: 2%;
     width: 100%;
     position: relative;
@@ -101,7 +102,7 @@ main form button {
     font-size: 1.6em;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s ease-in-out;  
+    transition: 0.3s ease-in-out;
 }
 
 main form button:hover {
@@ -109,7 +110,7 @@ main form button:hover {
     color: #18acfe;
 }
 
-#Msgerro{
+#Msgerro {
     margin: 30px;
     padding: 10px;
     border: 10px;
@@ -122,7 +123,7 @@ main form button:hover {
     border-radius: 10px;
 }
 
-#Sucesso{
+#Sucesso {
     margin: 30px;
     padding: 10px;
     border: 10px;
