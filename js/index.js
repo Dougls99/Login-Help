@@ -58,8 +58,7 @@ function cadastrar() {
     if (validnome && validemail && validsenha && validconfirmsenha) {
         Sucesso.setAttribute('style', 'display: block')
         Msgerro.setAttribute('style', 'display: none')
-        setTimeout(()=>{
-            window.history.back() },2000);
+        setTimeout(()=>{ window.history.back() },2000);
     } else {
         Sucesso.setAttribute('style', 'display: none')
         Msgerro.setAttribute('style', 'display: block')
@@ -94,10 +93,10 @@ email.addEventListener('keyup', () => {
     if (email.value == "" ||
         email.value.indexOf('@') == -1 ||
         email.value.indexOf('.') == -1 ||
-        email.value.indexOf('.com') == -1
-        // email.value.indexOf('hotmail') == -1 &&
-        // email.value.indexOf('gmail') == -1 &&
-        // email.value.indexOf('outlook') == -1
+        email.value.indexOf('.com') == -1 &&
+        email.value.indexOf('hotmail') == -1 &&
+        email.value.indexOf('gmail') == -1 &&
+        email.value.indexOf('outlook') == -1
     ) {
         email.setAttribute('style', 'background-color: red;')
         labelemail.innerHTML = 'Email invalido'
