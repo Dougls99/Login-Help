@@ -54,22 +54,17 @@ function showPassword2() {
 /*Esconder senha 2*/
 
 function cadastrar() {
-    let wasValidated = false;
 
     if (validnome && validemail && validsenha && validconfirmsenha) {
-
         Sucesso.setAttribute('style', 'display: block')
         Msgerro.setAttribute('style', 'display: none')
-        wasValidated = true;
-
+        setTimeout(()=>{
+            window.history.back() },2000);
     } else {
-        Msgerro.setAttribute('style', 'display: block')
         Sucesso.setAttribute('style', 'display: none')
+        Msgerro.setAttribute('style', 'display: block')
     }
 
-    if (wasValidated) {
-        window.history.back()
-    }
     console.log(`
         validnome=${validnome}\n
         validemail=${validemail}\n
@@ -99,10 +94,10 @@ email.addEventListener('keyup', () => {
     if (email.value == "" ||
         email.value.indexOf('@') == -1 ||
         email.value.indexOf('.') == -1 ||
-        email.value.indexOf('.com') == -1 ||
-        email.value.indexOf('hotmail') == -1 &&
-        email.value.indexOf('gmail') == -1 &&
-        email.value.indexOf('outlook') == -1
+        email.value.indexOf('.com') == -1
+        // email.value.indexOf('hotmail') == -1 &&
+        // email.value.indexOf('gmail') == -1 &&
+        // email.value.indexOf('outlook') == -1
     ) {
         email.setAttribute('style', 'background-color: red;')
         labelemail.innerHTML = 'Email invalido'
