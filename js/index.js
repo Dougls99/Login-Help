@@ -157,7 +157,7 @@ function entrar(){
     let emailLogin = document.querySelector('#emailLogin')
     let senhaLogin = document.querySelector('#fiel-password')
     let listaUser = []
-    let userValid = { nome: '', email:'', senha:''}
+    let userValid = { nome: 'null', email:'null', senha:'null'}
 
     listaUser = JSON.parse(localStorage.getItem('listaUser'))
     
@@ -172,12 +172,13 @@ function entrar(){
         }
     });
     
-    if(emailLogin.value == userValid.email && senhaLogin.value == userValid.senha){
+    if(emailLogin.value == userValid.email && 
+        senhaLogin.value == userValid.senha != []){
         window.location.href = ''
-        console.log('certo')
+        alert("Deu Certo")
     } else{
         msgErro.setAttribute('style', 'display: block')
         emailLogin.focus()  
-        console.log('deu errado')     
+        alert('deu errado')     
     }
 }
