@@ -17,6 +17,9 @@ let validconfirmsenha = false
 let Msgerro = document.querySelector('#Msgerro')
 let Sucesso = document.querySelector('#Sucesso')
 
+let msgErro = document.querySelector('#msgErro')
+let msgSucesso = document.querySelector('#msgSucesso')
+
 function showPassword() {
     const eye = document.getElementById('eye');
     const eyeSlash = document.getElementById('eye-slash');
@@ -56,6 +59,17 @@ function showPassword2() {
 function cadastrar() {
 
     if (validnome && validemail && validsenha && validconfirmsenha) {
+
+        let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+
+        listaUser.push(
+            { nomeCad: nome.value,
+              emailCad: email.value,
+              senhaCad: senha.value
+            }
+        )
+        localStorage.setItem('listaUser', JSON.stringify(listaUser))
+
         Sucesso.setAttribute('style', 'display: block')
         Msgerro.setAttribute('style', 'display: none')
         setTimeout(()=>{ window.history.back() },2000);
@@ -139,3 +153,31 @@ confirmsenha.addEventListener('keyup', () => {
     }
 })
 /*corfirmaçao da senha*/
+function entrar(){
+    let emailLogin = document.querySelector('#emailLogin')
+    let senhaLogin = document.querySelector('#fiel-password')
+    let listaUser = []
+    let userValid = { nome: '', email:'', senha:''}
+
+    listaUser = JSON.parse(localStorage.getItem('listaUser'))
+    
+    listaUser.forEach((item) => {
+        if(emailLogin.value == item.emailCad && senha.value == item.senhaCad ){
+
+            userValid = {
+                nome: item.nomeCad,
+                email: item.emailCad,
+                senha: item.senhaCad
+          }
+        }
+    });
+    
+    if(emailLogin.value == userValid.email && senhaLogin.value == userValid.senha){
+        window.location.href = ''
+        console.log('certo')
+    } else{
+        msgErro.setAttribute('style', 'display: block')
+        emailLogin.focus()  
+        console.log('deu errado')     
+    }
+}

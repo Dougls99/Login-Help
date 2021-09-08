@@ -235,3 +235,27 @@ main form footer a {
 main form footer a:hover {
     color: #18acfe;
 }
+
+#msgErro {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(238, 40, 56);
+    color: #fff;
+    width: 90%;
+    height: 9%;
+    text-align: center;
+    display: none;
+    border-radius: 10px;
+}
+
+#msgSucesso {
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(77, 240, 62);
+    color: #fff;
+    width: 90%;
+    height: 7%;
+    text-align: center;
+    display: none;
+    border-radius: 10px;
+}

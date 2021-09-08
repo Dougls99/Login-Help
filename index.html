@@ -19,9 +19,11 @@
     </header>
     <main>
         <form>
+            <div id="msgErro">Preencha os Campos Corretamente!</div>
+            <div id="msgSucesso">Cadastrando...</div>
             <div class="form-container">
                 <section class="inputs-container">
-                    <input type="email" placeholder="example@gmail.com">
+                    <input type="email" id="emailLogin" placeholder="example@gmail.com">
                     
                     <div class="password-container">
                         <input type="password" id="fiel-password" class="fiel-password" placeholder="********">
@@ -36,7 +38,7 @@
                     </div>
                     <a href="a">Esqueceu sua senha?</a>
                 </section>
-                <button type="button" id="btn-login">Login</button>
+                <button onclick="entrar()" type="button"  id="btn-login">Login</button>
                 
                 <section class="links-container">
                     <span>Ou entre com:</span>
