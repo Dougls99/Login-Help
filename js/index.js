@@ -93,7 +93,7 @@ email.addEventListener('keyup', () => {
     if (email.value == "" ||
         email.value.indexOf('@') == -1 ||
         email.value.indexOf('.') == -1 ||
-        email.value.indexOf('.com') == -1 &&
+        email.value.indexOf('.com') == -1 ||
         email.value.indexOf('hotmail') == -1 &&
         email.value.indexOf('gmail') == -1 &&
         email.value.indexOf('outlook') == -1
